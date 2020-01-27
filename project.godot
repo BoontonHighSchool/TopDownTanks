@@ -16,8 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="EnemyPathFollow-Demo"
-run/main_scene="res://World.tscn"
+run/main_scene="res://StartScreen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Global.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [rendering]
 

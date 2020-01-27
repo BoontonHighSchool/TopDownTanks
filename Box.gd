@@ -1,6 +1,6 @@
 extends Node2D
 
-var HitCount = 3
+var HitCount = 1
 var BigExplosionOBJ = preload("res://BigExplosion.tscn")
 
 func _ready():

@@ -21,11 +21,9 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
 rotation = 0.785398
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
 rotation = -0.785398
 shape = SubResource( 2 )

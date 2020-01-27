@@ -4,6 +4,7 @@ extends KinematicBody2D
 
 var speed = 200
 var rotation_speed = 3
+var score = 0
 
 var velocity = Vector2()
 var rotation_dir = 0
@@ -34,6 +35,14 @@ func _physics_process(delta):
 	rotation += rotation_dir * rotation_speed * delta
 	velocity = move_and_slide(velocity)
 	
+	if Global.EnemyCount == 0:
+		get_tree().change_scene("res://WinScreen.tscn")
+
+
+# Uncomment the below line(s) for Space Shooter / Asteroids Style Screenwrap	
+#	position.x = wrapf(position.x, 0, screen_size.x)
+#	position.y = wrapf(position.y, 0, screen_size.y)
+
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		print("Collided with: ", collision.collider.name)
@@ -41,9 +50,7 @@ func _physics_process(delta):
 			self.kill()
 
 func kill():
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://LoseScreen.tscn")
 	
-# Uncomment the below line(s) for Space Shooter / Asteroids Style Screenwrap	
-#	position.x = wrapf(position.x, 0, screen_size.x)
-#	position.y = wrapf(position.y, 0, screen_size.y)
+
 

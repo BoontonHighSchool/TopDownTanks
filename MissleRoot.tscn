@@ -8,6 +8,7 @@ radius = 7.80742
 height = 20.4239
 
 [node name="MissleRoot" type="Node2D"]
+z_index = 1
 script = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="." groups=[
